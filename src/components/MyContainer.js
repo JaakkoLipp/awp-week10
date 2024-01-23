@@ -9,13 +9,11 @@ function MyContainer() {
   ]);
 
   const toggleComplete = (id) => {
-    const updatedItems = items.map((item) => {
-      if (item.id === id) {
-        return { ...item, clicked: !item.clicked };
-      }
-      return item;
-    });
-    setItems(updatedItems);
+    setItems(
+      items.map((item) =>
+        item.id === id ? { ...item, clicked: !item.clicked } : item
+      )
+    );
   };
 
   const [newItemText, setNewItemText] = useState("");

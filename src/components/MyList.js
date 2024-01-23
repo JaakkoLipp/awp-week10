@@ -7,7 +7,7 @@ function MyList({ header, items, toggleComplete }) {
           <li
             onClick={() => toggleComplete(item.id)}
             key={item.id}
-            style={{ textDecoration: item.completed ? "line-through" : "" }}
+            style={{ textDecoration: item.clicked ? "line-through" : "" }}
           >
             {item.text}
           </li>
